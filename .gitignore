@@ -1,0 +1,5 @@
+Debug/
+Release/
+.vs/
+ComDrawer/ComDrawer.vcxproj.user
+DrawerServer/DrawerServer.vcxproj.user
