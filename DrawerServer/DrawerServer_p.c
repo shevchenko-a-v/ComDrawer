@@ -48,8 +48,8 @@
 
 #include "DrawerServer_i.h"
 
-#define TYPE_FORMAT_STRING_SIZE   27                                
-#define PROC_FORMAT_STRING_SIZE   85                                
+#define TYPE_FORMAT_STRING_SIZE   37                                
+#define PROC_FORMAT_STRING_SIZE   73                                
 #define EXPR_FORMAT_STRING_SIZE   1                                 
 #define TRANSMIT_AS_TABLE_SIZE    0            
 #define WIRE_MARSHAL_TABLE_SIZE   0            
@@ -112,73 +112,58 @@ static const DrawerServer_MIDL_PROC_FORMAT_STRING DrawerServer__MIDL_ProcFormatS
 			0x6c,		/* Old Flags:  object, Oi2 */
 /*  2 */	NdrFcLong( 0x0 ),	/* 0 */
 /*  6 */	NdrFcShort( 0x7 ),	/* 7 */
-/*  8 */	NdrFcShort( 0x14 ),	/* x86 Stack size/offset = 20 */
-/* 10 */	NdrFcShort( 0x18 ),	/* 24 */
+/*  8 */	NdrFcShort( 0x18 ),	/* x86 Stack size/offset = 24 */
+/* 10 */	NdrFcShort( 0x20 ),	/* 32 */
 /* 12 */	NdrFcShort( 0x8 ),	/* 8 */
 /* 14 */	0x44,		/* Oi2 Flags:  has return, has ext, */
-			0x4,		/* 4 */
+			0x2,		/* 2 */
 /* 16 */	0x8,		/* 8 */
 			0x41,		/* Ext Flags:  new corr desc, has range on conformance */
 /* 18 */	NdrFcShort( 0x0 ),	/* 0 */
 /* 20 */	NdrFcShort( 0x0 ),	/* 0 */
 /* 22 */	NdrFcShort( 0x0 ),	/* 0 */
 
-	/* Parameter xPos */
+	/* Parameter rect */
 
-/* 24 */	NdrFcShort( 0x48 ),	/* Flags:  in, base type, */
+/* 24 */	NdrFcShort( 0x8a ),	/* Flags:  must free, in, by val, */
 /* 26 */	NdrFcShort( 0x4 ),	/* x86 Stack size/offset = 4 */
-/* 28 */	0x8,		/* FC_LONG */
-			0x0,		/* 0 */
-
-	/* Parameter yPos */
-
-/* 30 */	NdrFcShort( 0x48 ),	/* Flags:  in, base type, */
-/* 32 */	NdrFcShort( 0x8 ),	/* x86 Stack size/offset = 8 */
-/* 34 */	0x8,		/* FC_LONG */
-			0x0,		/* 0 */
-
-	/* Parameter sideSize */
-
-/* 36 */	NdrFcShort( 0x48 ),	/* Flags:  in, base type, */
-/* 38 */	NdrFcShort( 0xc ),	/* x86 Stack size/offset = 12 */
-/* 40 */	0x8,		/* FC_LONG */
-			0x0,		/* 0 */
+/* 28 */	NdrFcShort( 0x2 ),	/* Type Offset=2 */
 
 	/* Return value */
 
-/* 42 */	NdrFcShort( 0x70 ),	/* Flags:  out, return, base type, */
-/* 44 */	NdrFcShort( 0x10 ),	/* x86 Stack size/offset = 16 */
-/* 46 */	0x8,		/* FC_LONG */
+/* 30 */	NdrFcShort( 0x70 ),	/* Flags:  out, return, base type, */
+/* 32 */	NdrFcShort( 0x14 ),	/* x86 Stack size/offset = 20 */
+/* 34 */	0x8,		/* FC_LONG */
 			0x0,		/* 0 */
 
 	/* Procedure Draw */
 
-/* 48 */	0x33,		/* FC_AUTO_HANDLE */
+/* 36 */	0x33,		/* FC_AUTO_HANDLE */
 			0x6c,		/* Old Flags:  object, Oi2 */
-/* 50 */	NdrFcLong( 0x0 ),	/* 0 */
-/* 54 */	NdrFcShort( 0x8 ),	/* 8 */
-/* 56 */	NdrFcShort( 0xc ),	/* x86 Stack size/offset = 12 */
-/* 58 */	NdrFcShort( 0x0 ),	/* 0 */
-/* 60 */	NdrFcShort( 0x8 ),	/* 8 */
-/* 62 */	0x46,		/* Oi2 Flags:  clt must size, has return, has ext, */
+/* 38 */	NdrFcLong( 0x0 ),	/* 0 */
+/* 42 */	NdrFcShort( 0x8 ),	/* 8 */
+/* 44 */	NdrFcShort( 0xc ),	/* x86 Stack size/offset = 12 */
+/* 46 */	NdrFcShort( 0x0 ),	/* 0 */
+/* 48 */	NdrFcShort( 0x8 ),	/* 8 */
+/* 50 */	0x46,		/* Oi2 Flags:  clt must size, has return, has ext, */
 			0x2,		/* 2 */
-/* 64 */	0x8,		/* 8 */
+/* 52 */	0x8,		/* 8 */
 			0x45,		/* Ext Flags:  new corr desc, srv corr check, has range on conformance */
-/* 66 */	NdrFcShort( 0x0 ),	/* 0 */
-/* 68 */	NdrFcShort( 0x1 ),	/* 1 */
-/* 70 */	NdrFcShort( 0x0 ),	/* 0 */
+/* 54 */	NdrFcShort( 0x0 ),	/* 0 */
+/* 56 */	NdrFcShort( 0x1 ),	/* 1 */
+/* 58 */	NdrFcShort( 0x0 ),	/* 0 */
 
 	/* Parameter hDc */
 
-/* 72 */	NdrFcShort( 0xb ),	/* Flags:  must size, must free, in, */
-/* 74 */	NdrFcShort( 0x4 ),	/* x86 Stack size/offset = 4 */
-/* 76 */	NdrFcShort( 0x2 ),	/* Type Offset=2 */
+/* 60 */	NdrFcShort( 0xb ),	/* Flags:  must size, must free, in, */
+/* 62 */	NdrFcShort( 0x4 ),	/* x86 Stack size/offset = 4 */
+/* 64 */	NdrFcShort( 0xc ),	/* Type Offset=12 */
 
 	/* Return value */
 
-/* 78 */	NdrFcShort( 0x70 ),	/* Flags:  out, return, base type, */
-/* 80 */	NdrFcShort( 0x8 ),	/* x86 Stack size/offset = 8 */
-/* 82 */	0x8,		/* FC_LONG */
+/* 66 */	NdrFcShort( 0x70 ),	/* Flags:  out, return, base type, */
+/* 68 */	NdrFcShort( 0x8 ),	/* x86 Stack size/offset = 8 */
+/* 70 */	0x8,		/* FC_LONG */
 			0x0,		/* 0 */
 
 			0x0
@@ -191,18 +176,28 @@ static const DrawerServer_MIDL_TYPE_FORMAT_STRING DrawerServer__MIDL_TypeFormatS
         {
 			NdrFcShort( 0x0 ),	/* 0 */
 /*  2 */	
+			0x15,		/* FC_STRUCT */
+			0x3,		/* 3 */
+/*  4 */	NdrFcShort( 0x10 ),	/* 16 */
+/*  6 */	0x8,		/* FC_LONG */
+			0x8,		/* FC_LONG */
+/*  8 */	0x8,		/* FC_LONG */
+			0x8,		/* FC_LONG */
+/* 10 */	0x5c,		/* FC_PAD */
+			0x5b,		/* FC_END */
+/* 12 */	
 			0x12, 0x0,	/* FC_UP */
-/*  4 */	NdrFcShort( 0x2 ),	/* Offset= 2 (6) */
-/*  6 */	
+/* 14 */	NdrFcShort( 0x2 ),	/* Offset= 2 (16) */
+/* 16 */	
 			0x2a,		/* FC_ENCAPSULATED_UNION */
 			0x48,		/* 72 */
-/*  8 */	NdrFcShort( 0x4 ),	/* 4 */
-/* 10 */	NdrFcShort( 0x2 ),	/* 2 */
-/* 12 */	NdrFcLong( 0x48746457 ),	/* 1215587415 */
-/* 16 */	NdrFcShort( 0x8008 ),	/* Simple arm type: FC_LONG */
-/* 18 */	NdrFcLong( 0x52746457 ),	/* 1383359575 */
-/* 22 */	NdrFcShort( 0x8008 ),	/* Simple arm type: FC_LONG */
-/* 24 */	NdrFcShort( 0xffff ),	/* Offset= -1 (23) */
+/* 18 */	NdrFcShort( 0x4 ),	/* 4 */
+/* 20 */	NdrFcShort( 0x2 ),	/* 2 */
+/* 22 */	NdrFcLong( 0x48746457 ),	/* 1215587415 */
+/* 26 */	NdrFcShort( 0x8008 ),	/* Simple arm type: FC_LONG */
+/* 28 */	NdrFcLong( 0x52746457 ),	/* 1383359575 */
+/* 32 */	NdrFcShort( 0x8008 ),	/* Simple arm type: FC_LONG */
+/* 34 */	NdrFcShort( 0xffff ),	/* Offset= -1 (33) */
 
 			0x0
         }
@@ -228,7 +223,7 @@ static const unsigned short ISquareObject_FormatStringOffsetTable[] =
     (unsigned short) -1,
     (unsigned short) -1,
     0,
-    48
+    36
     };
 
 static const MIDL_STUBLESS_PROXY_INFO ISquareObject_ProxyInfo =

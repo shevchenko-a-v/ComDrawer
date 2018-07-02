@@ -89,9 +89,7 @@ EXTERN_C const IID IID_ISquareObject;
     {
     public:
         virtual HRESULT STDMETHODCALLTYPE SetPosition( 
-            /* [in] */ int xPos,
-            /* [in] */ int yPos,
-            /* [in] */ int sideSize) = 0;
+            /* [in] */ RECT rect) = 0;
         
         virtual HRESULT STDMETHODCALLTYPE Draw( 
             /* [in] */ wireHDC hDc) = 0;
@@ -156,9 +154,7 @@ EXTERN_C const IID IID_ISquareObject;
         
         HRESULT ( STDMETHODCALLTYPE *SetPosition )( 
             ISquareObject * This,
-            /* [in] */ int xPos,
-            /* [in] */ int yPos,
-            /* [in] */ int sideSize);
+            /* [in] */ RECT rect);
         
         HRESULT ( STDMETHODCALLTYPE *Draw )( 
             ISquareObject * This,
@@ -200,8 +196,8 @@ EXTERN_C const IID IID_ISquareObject;
     ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 
-#define ISquareObject_SetPosition(This,xPos,yPos,sideSize)	\
-    ( (This)->lpVtbl -> SetPosition(This,xPos,yPos,sideSize) ) 
+#define ISquareObject_SetPosition(This,rect)	\
+    ( (This)->lpVtbl -> SetPosition(This,rect) ) 
 
 #define ISquareObject_Draw(This,hDc)	\
     ( (This)->lpVtbl -> Draw(This,hDc) ) 
