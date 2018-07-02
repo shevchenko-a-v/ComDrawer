@@ -7,7 +7,7 @@ public:
 	~DimensionSplitter() {}
 
 	void SetBaseRect(const CRect &rect);
-	void GetSplitRects(std::vector<CRect> &splitRects);
+	void GetSplitRects(std::vector<RECT> &splitRects);
 private:
 	CRect m_rectToSplit;
 };

@@ -1,6 +1,6 @@
 #include "stdafx.h"
 #include "DimensionSplitter.h"
-#include "ExternalInc\kdtree.h"
+#include "ExternalInc\kdtree.h" // a little bit modified external file to retrieve rects without intersection
 
 
 void DimensionSplitter::SetBaseRect(const CRect & rect)
@@ -8,7 +8,7 @@ void DimensionSplitter::SetBaseRect(const CRect & rect)
 	m_rectToSplit = rect;
 }
 
-void DimensionSplitter::GetSplitRects(std::vector<CRect> &splitRects)
+void DimensionSplitter::GetSplitRects(std::vector<RECT> &splitRects)
 {
 	const int avarageSizeOfRect = 100 * 100;
 
@@ -27,7 +27,6 @@ void DimensionSplitter::GetSplitRects(std::vector<CRect> &splitRects)
 	}
 
 	kdt::KDTree<MyPoint> tree(points);
-	std::vector<RECT> rects = tree.getRects(m_rectToSplit);
 	splitRects.clear();
-	splitRects.insert(splitRects.end(), rects.begin(), rects.end());
+	tree.getTreeAsRects(m_rectToSplit, splitRects);
 }

@@ -101,9 +101,9 @@ namespace kdt
 			return indices;
 		}
 
-		std::vector<RECT> getRects(RECT baseRect)
+		void getTreeAsRects(RECT baseRect, std::vector<RECT> &rects)
 		{
-			return getRectsRecursive(root_, baseRect);
+			getTreeAsRectsRecursive(root_, baseRect, rects);
 		}
 
 	private:
@@ -181,10 +181,13 @@ namespace kdt
 			return node;
 		}
 
-		std::vector<RECT> getRectsRecursive(Node *node, RECT baseRect)
+		void getTreeAsRectsRecursive(Node *node, RECT baseRect, std::vector<RECT> &rects)
 		{
 			if (node == nullptr)
-				return std::vector<RECT>();
+			{
+				rects.push_back(baseRect);
+				return;
+			}
 			std::vector<RECT> ret;
 			bool splitByX = node->axis == 0;
 			int xSplit = points_[node->idx][node->axis];
@@ -198,17 +201,9 @@ namespace kdt
 			second.right = baseRect.right;
 			second.top = !splitByX ? ySplit : baseRect.top;
 			second.bottom = baseRect.bottom;
-			std::vector<RECT> firstChildRects = getRectsRecursive(node->next[0], first);
-			std::vector<RECT> secondChildRects = getRectsRecursive(node->next[1], second);
+			getTreeAsRectsRecursive(node->next[0], first, rects);
+			getTreeAsRectsRecursive(node->next[1], second, rects);
 			
-			if (firstChildRects.size() == 0)
-				firstChildRects.push_back(first);
-			if (secondChildRects.size() == 0)
-				secondChildRects.push_back(second);
-
-			ret.insert(ret.end(), firstChildRects.begin(), firstChildRects.end());
-			ret.insert(ret.end(), secondChildRects.begin(), secondChildRects.end());
-			return ret;
 		}
 
 		/** @brief Clears k-d tree recursively.
