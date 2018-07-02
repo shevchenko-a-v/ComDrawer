@@ -1,7 +1,6 @@
 #include "stdafx.h"
 #include "DimensionSplitter.h"
 #include "ExternalInc\kdtree.h"
-#include <random>
 
 
 void DimensionSplitter::SetBaseRect(const CRect & rect)
