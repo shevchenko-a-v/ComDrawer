@@ -1,0 +1,16 @@
+HKCR
+{
+	NoRemove CLSID
+	{
+		ForceRemove {f97f9cd8-8265-49de-9811-afc72641ce70} = s 'TriangleObject class'
+		{
+			ForceRemove Programmable
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			TypeLib = s '{a2c90dc8-b295-4d6b-a54e-fb123e7bb90e}'
+			Version = s '1.0'
+		}
+	}
+}

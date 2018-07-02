@@ -34,6 +34,18 @@
     <ClCompile Include="SquareObject.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="RectangleObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EllipseObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CircleObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TriangleObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -54,6 +66,18 @@
     <ClInclude Include="SquareObject.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="RectangleObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EllipseObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CircleObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TriangleObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="DrawerServer.rc">
@@ -68,6 +92,18 @@
       <Filter>Source Files</Filter>
     </None>
     <None Include="SquareObject.rgs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RectangleObject.rgs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="EllipseObject.rgs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="CircleObject.rgs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="TriangleObject.rgs">
       <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>

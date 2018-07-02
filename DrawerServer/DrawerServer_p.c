@@ -48,11 +48,11 @@
 
 #include "DrawerServer_i.h"
 
-#define TYPE_FORMAT_STRING_SIZE   37                                
-#define PROC_FORMAT_STRING_SIZE   73                                
+#define TYPE_FORMAT_STRING_SIZE   57                                
+#define PROC_FORMAT_STRING_SIZE   121                               
 #define EXPR_FORMAT_STRING_SIZE   1                                 
 #define TRANSMIT_AS_TABLE_SIZE    0            
-#define WIRE_MARSHAL_TABLE_SIZE   0            
+#define WIRE_MARSHAL_TABLE_SIZE   2            
 
 typedef struct _DrawerServer_MIDL_TYPE_FORMAT_STRING
     {
@@ -89,6 +89,35 @@ extern const MIDL_SERVER_INFO ISquareObject_ServerInfo;
 extern const MIDL_STUBLESS_PROXY_INFO ISquareObject_ProxyInfo;
 
 
+extern const MIDL_STUB_DESC Object_StubDesc;
+
+
+extern const MIDL_SERVER_INFO IRectangleObject_ServerInfo;
+extern const MIDL_STUBLESS_PROXY_INFO IRectangleObject_ProxyInfo;
+
+
+extern const MIDL_STUB_DESC Object_StubDesc;
+
+
+extern const MIDL_SERVER_INFO IEllipseObject_ServerInfo;
+extern const MIDL_STUBLESS_PROXY_INFO IEllipseObject_ProxyInfo;
+
+
+extern const MIDL_STUB_DESC Object_StubDesc;
+
+
+extern const MIDL_SERVER_INFO ICircleObject_ServerInfo;
+extern const MIDL_STUBLESS_PROXY_INFO ICircleObject_ProxyInfo;
+
+
+extern const MIDL_STUB_DESC Object_StubDesc;
+
+
+extern const MIDL_SERVER_INFO ITriangleObject_ServerInfo;
+extern const MIDL_STUBLESS_PROXY_INFO ITriangleObject_ProxyInfo;
+
+
+extern const USER_MARSHAL_ROUTINE_QUADRUPLE UserMarshalRoutines[ WIRE_MARSHAL_TABLE_SIZE ];
 
 #if !defined(__RPC_WIN32__)
 #error  Invalid build platform for this stub.
@@ -105,6 +134,18 @@ static const DrawerServer_MIDL_PROC_FORMAT_STRING DrawerServer__MIDL_ProcFormatS
     {
         0,
         {
+
+	/* Procedure SetPosition */
+
+
+	/* Procedure SetPosition */
+
+
+	/* Procedure SetPosition */
+
+
+	/* Procedure SetPosition */
+
 
 	/* Procedure SetPosition */
 
@@ -125,9 +166,33 @@ static const DrawerServer_MIDL_PROC_FORMAT_STRING DrawerServer__MIDL_ProcFormatS
 
 	/* Parameter rect */
 
+
+	/* Parameter rect */
+
+
+	/* Parameter rect */
+
+
+	/* Parameter rect */
+
+
+	/* Parameter rect */
+
 /* 24 */	NdrFcShort( 0x8a ),	/* Flags:  must free, in, by val, */
 /* 26 */	NdrFcShort( 0x4 ),	/* x86 Stack size/offset = 4 */
 /* 28 */	NdrFcShort( 0x2 ),	/* Type Offset=2 */
+
+	/* Return value */
+
+
+	/* Return value */
+
+
+	/* Return value */
+
+
+	/* Return value */
+
 
 	/* Return value */
 
@@ -142,11 +207,11 @@ static const DrawerServer_MIDL_PROC_FORMAT_STRING DrawerServer__MIDL_ProcFormatS
 			0x6c,		/* Old Flags:  object, Oi2 */
 /* 38 */	NdrFcLong( 0x0 ),	/* 0 */
 /* 42 */	NdrFcShort( 0x8 ),	/* 8 */
-/* 44 */	NdrFcShort( 0xc ),	/* x86 Stack size/offset = 12 */
+/* 44 */	NdrFcShort( 0x10 ),	/* x86 Stack size/offset = 16 */
 /* 46 */	NdrFcShort( 0x0 ),	/* 0 */
 /* 48 */	NdrFcShort( 0x8 ),	/* 8 */
 /* 50 */	0x46,		/* Oi2 Flags:  clt must size, has return, has ext, */
-			0x2,		/* 2 */
+			0x3,		/* 3 */
 /* 52 */	0x8,		/* 8 */
 			0x45,		/* Ext Flags:  new corr desc, srv corr check, has range on conformance */
 /* 54 */	NdrFcShort( 0x0 ),	/* 0 */
@@ -155,15 +220,93 @@ static const DrawerServer_MIDL_PROC_FORMAT_STRING DrawerServer__MIDL_ProcFormatS
 
 	/* Parameter hDc */
 
-/* 60 */	NdrFcShort( 0xb ),	/* Flags:  must size, must free, in, */
+/* 60 */	NdrFcShort( 0x8b ),	/* Flags:  must size, must free, in, by val, */
 /* 62 */	NdrFcShort( 0x4 ),	/* x86 Stack size/offset = 4 */
-/* 64 */	NdrFcShort( 0xc ),	/* Type Offset=12 */
+/* 64 */	NdrFcShort( 0x24 ),	/* Type Offset=36 */
+
+	/* Parameter brush */
+
+/* 66 */	NdrFcShort( 0x8b ),	/* Flags:  must size, must free, in, by val, */
+/* 68 */	NdrFcShort( 0x8 ),	/* x86 Stack size/offset = 8 */
+/* 70 */	NdrFcShort( 0x2e ),	/* Type Offset=46 */
 
 	/* Return value */
 
-/* 66 */	NdrFcShort( 0x70 ),	/* Flags:  out, return, base type, */
-/* 68 */	NdrFcShort( 0x8 ),	/* x86 Stack size/offset = 8 */
-/* 70 */	0x8,		/* FC_LONG */
+/* 72 */	NdrFcShort( 0x70 ),	/* Flags:  out, return, base type, */
+/* 74 */	NdrFcShort( 0xc ),	/* x86 Stack size/offset = 12 */
+/* 76 */	0x8,		/* FC_LONG */
+			0x0,		/* 0 */
+
+	/* Procedure Draw */
+
+
+	/* Procedure Draw */
+
+
+	/* Procedure Draw */
+
+
+	/* Procedure Draw */
+
+/* 78 */	0x33,		/* FC_AUTO_HANDLE */
+			0x6c,		/* Old Flags:  object, Oi2 */
+/* 80 */	NdrFcLong( 0x0 ),	/* 0 */
+/* 84 */	NdrFcShort( 0x8 ),	/* 8 */
+/* 86 */	NdrFcShort( 0x10 ),	/* x86 Stack size/offset = 16 */
+/* 88 */	NdrFcShort( 0x0 ),	/* 0 */
+/* 90 */	NdrFcShort( 0x8 ),	/* 8 */
+/* 92 */	0x46,		/* Oi2 Flags:  clt must size, has return, has ext, */
+			0x3,		/* 3 */
+/* 94 */	0x8,		/* 8 */
+			0x41,		/* Ext Flags:  new corr desc, has range on conformance */
+/* 96 */	NdrFcShort( 0x0 ),	/* 0 */
+/* 98 */	NdrFcShort( 0x0 ),	/* 0 */
+/* 100 */	NdrFcShort( 0x0 ),	/* 0 */
+
+	/* Parameter hDc */
+
+
+	/* Parameter hDc */
+
+
+	/* Parameter hDc */
+
+
+	/* Parameter hDc */
+
+/* 102 */	NdrFcShort( 0x8b ),	/* Flags:  must size, must free, in, by val, */
+/* 104 */	NdrFcShort( 0x4 ),	/* x86 Stack size/offset = 4 */
+/* 106 */	NdrFcShort( 0x24 ),	/* Type Offset=36 */
+
+	/* Parameter brush */
+
+
+	/* Parameter brush */
+
+
+	/* Parameter brush */
+
+
+	/* Parameter brush */
+
+/* 108 */	NdrFcShort( 0x8b ),	/* Flags:  must size, must free, in, by val, */
+/* 110 */	NdrFcShort( 0x8 ),	/* x86 Stack size/offset = 8 */
+/* 112 */	NdrFcShort( 0x2e ),	/* Type Offset=46 */
+
+	/* Return value */
+
+
+	/* Return value */
+
+
+	/* Return value */
+
+
+	/* Return value */
+
+/* 114 */	NdrFcShort( 0x70 ),	/* Flags:  out, return, base type, */
+/* 116 */	NdrFcShort( 0xc ),	/* x86 Stack size/offset = 12 */
+/* 118 */	0x8,		/* FC_LONG */
 			0x0,		/* 0 */
 
 			0x0
@@ -198,10 +341,41 @@ static const DrawerServer_MIDL_TYPE_FORMAT_STRING DrawerServer__MIDL_TypeFormatS
 /* 28 */	NdrFcLong( 0x52746457 ),	/* 1383359575 */
 /* 32 */	NdrFcShort( 0x8008 ),	/* Simple arm type: FC_LONG */
 /* 34 */	NdrFcShort( 0xffff ),	/* Offset= -1 (33) */
+/* 36 */	0xb4,		/* FC_USER_MARSHAL */
+			0x83,		/* 131 */
+/* 38 */	NdrFcShort( 0x0 ),	/* 0 */
+/* 40 */	NdrFcShort( 0x4 ),	/* 4 */
+/* 42 */	NdrFcShort( 0x0 ),	/* 0 */
+/* 44 */	NdrFcShort( 0xffe0 ),	/* Offset= -32 (12) */
+/* 46 */	0xb4,		/* FC_USER_MARSHAL */
+			0x83,		/* 131 */
+/* 48 */	NdrFcShort( 0x1 ),	/* 1 */
+/* 50 */	NdrFcShort( 0x4 ),	/* 4 */
+/* 52 */	NdrFcShort( 0x0 ),	/* 0 */
+/* 54 */	NdrFcShort( 0xffd6 ),	/* Offset= -42 (12) */
 
 			0x0
         }
     };
+
+static const USER_MARSHAL_ROUTINE_QUADRUPLE UserMarshalRoutines[ WIRE_MARSHAL_TABLE_SIZE ] = 
+        {
+            
+            {
+            HDC_UserSize
+            ,HDC_UserMarshal
+            ,HDC_UserUnmarshal
+            ,HDC_UserFree
+            },
+            {
+            HBRUSH_UserSize
+            ,HBRUSH_UserMarshal
+            ,HBRUSH_UserUnmarshal
+            ,HBRUSH_UserFree
+            }
+
+        };
+
 
 
 /* Object interface: IUnknown, ver. 0.0,
@@ -282,6 +456,290 @@ CInterfaceStubVtbl _ISquareObjectStubVtbl =
     CStdStubBuffer_DELEGATING_METHODS
 };
 
+
+/* Object interface: IRectangleObject, ver. 0.0,
+   GUID={0x83c4e003,0xd606,0x4091,{0x89,0x6a,0xcd,0xbf,0x24,0xac,0x7e,0x68}} */
+
+#pragma code_seg(".orpc")
+static const unsigned short IRectangleObject_FormatStringOffsetTable[] =
+    {
+    (unsigned short) -1,
+    (unsigned short) -1,
+    (unsigned short) -1,
+    (unsigned short) -1,
+    0,
+    78
+    };
+
+static const MIDL_STUBLESS_PROXY_INFO IRectangleObject_ProxyInfo =
+    {
+    &Object_StubDesc,
+    DrawerServer__MIDL_ProcFormatString.Format,
+    &IRectangleObject_FormatStringOffsetTable[-3],
+    0,
+    0,
+    0
+    };
+
+
+static const MIDL_SERVER_INFO IRectangleObject_ServerInfo = 
+    {
+    &Object_StubDesc,
+    0,
+    DrawerServer__MIDL_ProcFormatString.Format,
+    &IRectangleObject_FormatStringOffsetTable[-3],
+    0,
+    0,
+    0,
+    0};
+CINTERFACE_PROXY_VTABLE(9) _IRectangleObjectProxyVtbl = 
+{
+    &IRectangleObject_ProxyInfo,
+    &IID_IRectangleObject,
+    IUnknown_QueryInterface_Proxy,
+    IUnknown_AddRef_Proxy,
+    IUnknown_Release_Proxy ,
+    0 /* IDispatch::GetTypeInfoCount */ ,
+    0 /* IDispatch::GetTypeInfo */ ,
+    0 /* IDispatch::GetIDsOfNames */ ,
+    0 /* IDispatch_Invoke_Proxy */ ,
+    (void *) (INT_PTR) -1 /* IRectangleObject::SetPosition */ ,
+    (void *) (INT_PTR) -1 /* IRectangleObject::Draw */
+};
+
+
+static const PRPC_STUB_FUNCTION IRectangleObject_table[] =
+{
+    STUB_FORWARDING_FUNCTION,
+    STUB_FORWARDING_FUNCTION,
+    STUB_FORWARDING_FUNCTION,
+    STUB_FORWARDING_FUNCTION,
+    NdrStubCall2,
+    NdrStubCall2
+};
+
+CInterfaceStubVtbl _IRectangleObjectStubVtbl =
+{
+    &IID_IRectangleObject,
+    &IRectangleObject_ServerInfo,
+    9,
+    &IRectangleObject_table[-3],
+    CStdStubBuffer_DELEGATING_METHODS
+};
+
+
+/* Object interface: IEllipseObject, ver. 0.0,
+   GUID={0x1013a9b4,0x0517,0x4c2a,{0xb4,0xa2,0x4f,0xdf,0x62,0x01,0xe8,0x14}} */
+
+#pragma code_seg(".orpc")
+static const unsigned short IEllipseObject_FormatStringOffsetTable[] =
+    {
+    (unsigned short) -1,
+    (unsigned short) -1,
+    (unsigned short) -1,
+    (unsigned short) -1,
+    0,
+    78
+    };
+
+static const MIDL_STUBLESS_PROXY_INFO IEllipseObject_ProxyInfo =
+    {
+    &Object_StubDesc,
+    DrawerServer__MIDL_ProcFormatString.Format,
+    &IEllipseObject_FormatStringOffsetTable[-3],
+    0,
+    0,
+    0
+    };
+
+
+static const MIDL_SERVER_INFO IEllipseObject_ServerInfo = 
+    {
+    &Object_StubDesc,
+    0,
+    DrawerServer__MIDL_ProcFormatString.Format,
+    &IEllipseObject_FormatStringOffsetTable[-3],
+    0,
+    0,
+    0,
+    0};
+CINTERFACE_PROXY_VTABLE(9) _IEllipseObjectProxyVtbl = 
+{
+    &IEllipseObject_ProxyInfo,
+    &IID_IEllipseObject,
+    IUnknown_QueryInterface_Proxy,
+    IUnknown_AddRef_Proxy,
+    IUnknown_Release_Proxy ,
+    0 /* IDispatch::GetTypeInfoCount */ ,
+    0 /* IDispatch::GetTypeInfo */ ,
+    0 /* IDispatch::GetIDsOfNames */ ,
+    0 /* IDispatch_Invoke_Proxy */ ,
+    (void *) (INT_PTR) -1 /* IEllipseObject::SetPosition */ ,
+    (void *) (INT_PTR) -1 /* IEllipseObject::Draw */
+};
+
+
+static const PRPC_STUB_FUNCTION IEllipseObject_table[] =
+{
+    STUB_FORWARDING_FUNCTION,
+    STUB_FORWARDING_FUNCTION,
+    STUB_FORWARDING_FUNCTION,
+    STUB_FORWARDING_FUNCTION,
+    NdrStubCall2,
+    NdrStubCall2
+};
+
+CInterfaceStubVtbl _IEllipseObjectStubVtbl =
+{
+    &IID_IEllipseObject,
+    &IEllipseObject_ServerInfo,
+    9,
+    &IEllipseObject_table[-3],
+    CStdStubBuffer_DELEGATING_METHODS
+};
+
+
+/* Object interface: ICircleObject, ver. 0.0,
+   GUID={0x6f24d918,0x1a86,0x41aa,{0xa5,0x4c,0xcf,0x67,0xc3,0x29,0x2d,0x33}} */
+
+#pragma code_seg(".orpc")
+static const unsigned short ICircleObject_FormatStringOffsetTable[] =
+    {
+    (unsigned short) -1,
+    (unsigned short) -1,
+    (unsigned short) -1,
+    (unsigned short) -1,
+    0,
+    78
+    };
+
+static const MIDL_STUBLESS_PROXY_INFO ICircleObject_ProxyInfo =
+    {
+    &Object_StubDesc,
+    DrawerServer__MIDL_ProcFormatString.Format,
+    &ICircleObject_FormatStringOffsetTable[-3],
+    0,
+    0,
+    0
+    };
+
+
+static const MIDL_SERVER_INFO ICircleObject_ServerInfo = 
+    {
+    &Object_StubDesc,
+    0,
+    DrawerServer__MIDL_ProcFormatString.Format,
+    &ICircleObject_FormatStringOffsetTable[-3],
+    0,
+    0,
+    0,
+    0};
+CINTERFACE_PROXY_VTABLE(9) _ICircleObjectProxyVtbl = 
+{
+    &ICircleObject_ProxyInfo,
+    &IID_ICircleObject,
+    IUnknown_QueryInterface_Proxy,
+    IUnknown_AddRef_Proxy,
+    IUnknown_Release_Proxy ,
+    0 /* IDispatch::GetTypeInfoCount */ ,
+    0 /* IDispatch::GetTypeInfo */ ,
+    0 /* IDispatch::GetIDsOfNames */ ,
+    0 /* IDispatch_Invoke_Proxy */ ,
+    (void *) (INT_PTR) -1 /* ICircleObject::SetPosition */ ,
+    (void *) (INT_PTR) -1 /* ICircleObject::Draw */
+};
+
+
+static const PRPC_STUB_FUNCTION ICircleObject_table[] =
+{
+    STUB_FORWARDING_FUNCTION,
+    STUB_FORWARDING_FUNCTION,
+    STUB_FORWARDING_FUNCTION,
+    STUB_FORWARDING_FUNCTION,
+    NdrStubCall2,
+    NdrStubCall2
+};
+
+CInterfaceStubVtbl _ICircleObjectStubVtbl =
+{
+    &IID_ICircleObject,
+    &ICircleObject_ServerInfo,
+    9,
+    &ICircleObject_table[-3],
+    CStdStubBuffer_DELEGATING_METHODS
+};
+
+
+/* Object interface: ITriangleObject, ver. 0.0,
+   GUID={0xd6f8edb5,0x1a56,0x4890,{0xbb,0x09,0xa0,0x3c,0xdb,0x36,0xf5,0x14}} */
+
+#pragma code_seg(".orpc")
+static const unsigned short ITriangleObject_FormatStringOffsetTable[] =
+    {
+    (unsigned short) -1,
+    (unsigned short) -1,
+    (unsigned short) -1,
+    (unsigned short) -1,
+    0,
+    78
+    };
+
+static const MIDL_STUBLESS_PROXY_INFO ITriangleObject_ProxyInfo =
+    {
+    &Object_StubDesc,
+    DrawerServer__MIDL_ProcFormatString.Format,
+    &ITriangleObject_FormatStringOffsetTable[-3],
+    0,
+    0,
+    0
+    };
+
+
+static const MIDL_SERVER_INFO ITriangleObject_ServerInfo = 
+    {
+    &Object_StubDesc,
+    0,
+    DrawerServer__MIDL_ProcFormatString.Format,
+    &ITriangleObject_FormatStringOffsetTable[-3],
+    0,
+    0,
+    0,
+    0};
+CINTERFACE_PROXY_VTABLE(9) _ITriangleObjectProxyVtbl = 
+{
+    &ITriangleObject_ProxyInfo,
+    &IID_ITriangleObject,
+    IUnknown_QueryInterface_Proxy,
+    IUnknown_AddRef_Proxy,
+    IUnknown_Release_Proxy ,
+    0 /* IDispatch::GetTypeInfoCount */ ,
+    0 /* IDispatch::GetTypeInfo */ ,
+    0 /* IDispatch::GetIDsOfNames */ ,
+    0 /* IDispatch_Invoke_Proxy */ ,
+    (void *) (INT_PTR) -1 /* ITriangleObject::SetPosition */ ,
+    (void *) (INT_PTR) -1 /* ITriangleObject::Draw */
+};
+
+
+static const PRPC_STUB_FUNCTION ITriangleObject_table[] =
+{
+    STUB_FORWARDING_FUNCTION,
+    STUB_FORWARDING_FUNCTION,
+    STUB_FORWARDING_FUNCTION,
+    STUB_FORWARDING_FUNCTION,
+    NdrStubCall2,
+    NdrStubCall2
+};
+
+CInterfaceStubVtbl _ITriangleObjectStubVtbl =
+{
+    &IID_ITriangleObject,
+    &ITriangleObject_ServerInfo,
+    9,
+    &ITriangleObject_table[-3],
+    CStdStubBuffer_DELEGATING_METHODS
+};
+
 static const MIDL_STUB_DESC Object_StubDesc = 
     {
     0,
@@ -298,7 +756,7 @@ static const MIDL_STUB_DESC Object_StubDesc =
     0,
     0x801026e, /* MIDL Version 8.1.622 */
     0,
-    0,
+    UserMarshalRoutines,
     0,  /* notify & notify_flag routine table */
     0x1, /* MIDL flag */
     0, /* cs routines */
@@ -308,24 +766,40 @@ static const MIDL_STUB_DESC Object_StubDesc =
 
 const CInterfaceProxyVtbl * const _DrawerServer_ProxyVtblList[] = 
 {
+    ( CInterfaceProxyVtbl *) &_IRectangleObjectProxyVtbl,
+    ( CInterfaceProxyVtbl *) &_ICircleObjectProxyVtbl,
     ( CInterfaceProxyVtbl *) &_ISquareObjectProxyVtbl,
+    ( CInterfaceProxyVtbl *) &_IEllipseObjectProxyVtbl,
+    ( CInterfaceProxyVtbl *) &_ITriangleObjectProxyVtbl,
     0
 };
 
 const CInterfaceStubVtbl * const _DrawerServer_StubVtblList[] = 
 {
+    ( CInterfaceStubVtbl *) &_IRectangleObjectStubVtbl,
+    ( CInterfaceStubVtbl *) &_ICircleObjectStubVtbl,
     ( CInterfaceStubVtbl *) &_ISquareObjectStubVtbl,
+    ( CInterfaceStubVtbl *) &_IEllipseObjectStubVtbl,
+    ( CInterfaceStubVtbl *) &_ITriangleObjectStubVtbl,
     0
 };
 
 PCInterfaceName const _DrawerServer_InterfaceNamesList[] = 
 {
+    "IRectangleObject",
+    "ICircleObject",
     "ISquareObject",
+    "IEllipseObject",
+    "ITriangleObject",
     0
 };
 
 const IID *  const _DrawerServer_BaseIIDList[] = 
 {
+    &IID_IDispatch,
+    &IID_IDispatch,
+    &IID_IDispatch,
+    &IID_IDispatch,
     &IID_IDispatch,
     0
 };
@@ -335,14 +809,13 @@ const IID *  const _DrawerServer_BaseIIDList[] =
 
 int __stdcall _DrawerServer_IID_Lookup( const IID * pIID, int * pIndex )
 {
-    
-    if(!_DrawerServer_CHECK_IID(0))
-        {
-        *pIndex = 0;
-        return 1;
-        }
+    IID_BS_LOOKUP_SETUP
 
-    return 0;
+    IID_BS_LOOKUP_INITIAL_TEST( _DrawerServer, 5, 4 )
+    IID_BS_LOOKUP_NEXT_TEST( _DrawerServer, 2 )
+    IID_BS_LOOKUP_NEXT_TEST( _DrawerServer, 1 )
+    IID_BS_LOOKUP_RETURN_RESULT( _DrawerServer, 5, *pIndex )
+    
 }
 
 const ExtendedProxyFileInfo DrawerServer_ProxyFileInfo = 
@@ -352,7 +825,7 @@ const ExtendedProxyFileInfo DrawerServer_ProxyFileInfo =
     (const PCInterfaceName * ) & _DrawerServer_InterfaceNamesList,
     (const IID ** ) & _DrawerServer_BaseIIDList,
     & _DrawerServer_IID_Lookup, 
-    1,
+    5,
     2,
     0, /* table of [async_uuid] interfaces */
     0, /* Filler1 */
